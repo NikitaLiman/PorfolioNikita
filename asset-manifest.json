@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PorfolioNikita/static/css/main.5f961ca5.css",
-    "main.js": "/PorfolioNikita/static/js/main.40103283.js",
+    "main.js": "/PorfolioNikita/static/js/main.3a73625a.js",
     "static/media/Снимок экрана 2025-01-31 201334.png": "/PorfolioNikita/static/media/Снимок экрана 2025-01-31 201334.d2d849ae38c31c5f3e7e.png",
     "static/media/MyImg.png": "/PorfolioNikita/static/media/MyImg.2265c980d8b278a39cd4.png",
     "static/media/Снимок экрана 2025-01-31 202833.png": "/PorfolioNikita/static/media/Снимок экрана 2025-01-31 202833.9cc824f3279bb74450e5.png",
@@ -22,10 +22,10 @@
     "static/media/Octicons-mark-github.svg": "/PorfolioNikita/static/media/Octicons-mark-github.3ea7d9bcdf7bb4836e2175ac2a12c306.svg",
     "static/media/prisma-4.svg": "/PorfolioNikita/static/media/prisma-4.116988239c82f4a91640a053679f14da.svg",
     "main.5f961ca5.css.map": "/PorfolioNikita/static/css/main.5f961ca5.css.map",
-    "main.40103283.js.map": "/PorfolioNikita/static/js/main.40103283.js.map"
+    "main.3a73625a.js.map": "/PorfolioNikita/static/js/main.3a73625a.js.map"
   },
   "entrypoints": [
     "static/css/main.5f961ca5.css",
-    "static/js/main.40103283.js"
+    "static/js/main.3a73625a.js"
   ]
 }
