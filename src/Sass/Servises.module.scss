@@ -1,0 +1,605 @@
+.container {
+  width: 100%;
+  margin-top: 230px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  &__content {
+    background-color: #171717;
+    border-radius: 50px;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .MyServises {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: start;
+      h1 {
+        font-size: 48px;
+        color: white;
+        span {
+          color: #fd853a;
+        }
+      }
+      p {
+        color: white;
+        max-width: 546px;
+      }
+    }
+    .Cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      .cardContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        background: #686868;
+        background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+        border-radius: 20px;
+        border: solid 1px rgb(193, 193, 193);
+        &__content {
+          display: flex;
+          gap: 30px;
+          flex-direction: column;
+          .title {
+            padding: 10px 20px;
+            height: 60px;
+            border-bottom: solid 1px rgb(193, 193, 193);
+            h1 {
+              color: white;
+            }
+          }
+          .Image {
+            margin-top: 40px;
+            position: relative;
+            max-height: 439px;
+            border-end-end-radius: 20px;
+            img {
+              max-height: 300px;
+              object-fit: contain;
+              border-bottom-right-radius: 20px;
+              border-bottom-left-radius: 20px;
+            }
+            &::after {
+              content: '';
+              background-color: #9e9d9d;
+              width: 95%;
+              height: 20px;
+              position: absolute;
+              top: -20px;
+              display: flex;
+              left: 10px;
+              border-top-left-radius: 100px;
+              border-top-right-radius: 100px;
+            }
+            &::before {
+              content: '';
+              background-color: #757575;
+              width: 85%;
+              height: 20px;
+              position: absolute;
+              top: -40px;
+              display: flex;
+              left: 30px;
+              border-top-left-radius: 100px;
+              border-top-right-radius: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1530px) {
+  .container {
+    width: 100%;
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+      max-width: 1220px;
+      background-color: #171717;
+      border-radius: 50px;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .MyServises {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        h1 {
+          font-size: 48px;
+          color: white;
+          span {
+            color: #fd853a;
+          }
+        }
+        p {
+          color: white;
+          max-width: 546px;
+        }
+      }
+      .Cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          background: #686868;
+          background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+          border-radius: 20px;
+          border: solid 1px rgb(193, 193, 193);
+          &__content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+              padding: 10px 20px;
+              height: 60px;
+              border-bottom: solid 1px rgb(193, 193, 193);
+              h1 {
+                color: white;
+              }
+            }
+            .Image {
+              margin-top: 40px;
+              position: relative;
+              max-height: 439px;
+              border-end-end-radius: 20px;
+              img {
+                max-height: 300px;
+                object-fit: contain;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+              &::after {
+                content: '';
+                background-color: #9e9d9d;
+                width: 95%;
+                height: 20px;
+                position: absolute;
+                top: -20px;
+                display: flex;
+                left: 10px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+              &::before {
+                content: '';
+                background-color: #757575;
+                width: 85%;
+                height: 20px;
+                position: absolute;
+                top: -40px;
+                display: flex;
+                left: 25px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1220px) {
+  .container {
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+      max-width: 1000px;
+      background-color: #171717;
+      border-radius: 50px;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .MyServises {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        h1 {
+          font-size: 48px;
+          color: white;
+          span {
+            color: #fd853a;
+          }
+        }
+        p {
+          color: white;
+          max-width: 546px;
+        }
+      }
+      .Cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          background: #686868;
+          background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+          border-radius: 20px;
+          border: solid 1px rgb(193, 193, 193);
+          &__content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+              padding: 10px 20px;
+              height: 60px;
+              border-bottom: solid 1px rgb(193, 193, 193);
+              h1 {
+                color: white;
+              }
+            }
+            .Image {
+              margin-top: 40px;
+              position: relative;
+              max-height: 439px;
+              border-end-end-radius: 20px;
+              img {
+                max-height: 300px;
+                object-fit: contain;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+              &::after {
+                content: '';
+                background-color: #9e9d9d;
+                width: 95%;
+                height: 20px;
+                position: absolute;
+                top: -20px;
+                display: flex;
+                left: 10px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+              &::before {
+                content: '';
+                background-color: #757575;
+                width: 85%;
+                height: 20px;
+                position: absolute;
+                top: -40px;
+                display: flex;
+                left: 25px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+      max-width: 800px;
+      background-color: #171717;
+      border-radius: 50px;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .MyServises {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        h1 {
+          font-size: 28px;
+          color: white;
+          span {
+            color: #fd853a;
+          }
+        }
+        p {
+          color: white;
+          max-width: 346px;
+        }
+      }
+      .Cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          background: #686868;
+          background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+          border-radius: 20px;
+          border: solid 1px rgb(193, 193, 193);
+          &__content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+              padding: 10px 20px;
+              height: 60px;
+              border-bottom: solid 1px rgb(193, 193, 193);
+              h1 {
+                color: white;
+              }
+            }
+            .Image {
+              margin-top: 40px;
+              position: relative;
+              max-height: 439px;
+              border-end-end-radius: 20px;
+              img {
+                max-height: 300px;
+                object-fit: contain;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+              &::after {
+                content: '';
+                background-color: #9e9d9d;
+                width: 90%;
+                height: 15px;
+                position: absolute;
+                top: -15px;
+                display: flex;
+                left: 10px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+              &::before {
+                content: '';
+                background-color: #757575;
+                width: 80%;
+                height: 15px;
+                position: absolute;
+                top: -30px;
+                display: flex;
+                left: 20px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+    margin-top: 350px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+      max-width: 550px;
+      background-color: #171717;
+      border-radius: 50px;
+      padding: 50px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .MyServises {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+        h1 {
+          font-size: 20px;
+          color: white;
+          span {
+            color: #fd853a;
+          }
+        }
+        p {
+          color: white;
+          font-size: 13px;
+          max-width: 246px;
+        }
+      }
+      .Cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          background: #686868;
+          background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+          border-radius: 20px;
+          border: solid 1px rgb(193, 193, 193);
+          &__content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+              padding: 10px 20px;
+              height: 60px;
+              border-bottom: solid 1px rgb(193, 193, 193);
+              h1 {
+                color: white;
+              }
+            }
+            .Image {
+              margin-top: 40px;
+              position: relative;
+              max-height: 439px;
+              border-end-end-radius: 20px;
+              img {
+                max-height: 300px;
+                object-fit: contain;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+              &::after {
+                content: '';
+                background-color: #9e9d9d;
+                width: 95%;
+                height: 15px;
+                position: absolute;
+                top: -15px;
+                display: flex;
+                left: 10px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+              &::before {
+                content: '';
+                background-color: #757575;
+                width: 85%;
+                height: 15px;
+                position: absolute;
+                top: -30px;
+                display: flex;
+                left: 30px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    margin-top: 350px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+      max-width: 550px;
+      background-color: #171717;
+      border-radius: 50px;
+      padding: 50px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .MyServises {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        h1 {
+          font-size: 20px;
+          color: white;
+          span {
+            color: #fd853a;
+          }
+        }
+        p {
+          text-align: center;
+          color: white;
+          font-size: 13px;
+          max-width: 246px;
+        }
+      }
+      .Cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+          background: #686868;
+          background: linear-gradient(90deg, #9c9c9c85 0%, #5555556b 51%);
+          border-radius: 20px;
+          border: solid 1px rgb(193, 193, 193);
+          &__content {
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            .title {
+              padding: 10px 20px;
+              height: 60px;
+              border-bottom: solid 1px rgb(193, 193, 193);
+              h1 {
+                color: white;
+              }
+            }
+            .Image {
+              margin-top: 40px;
+              position: relative;
+              max-height: 439px;
+              border-end-end-radius: 20px;
+              img {
+                max-height: 300px;
+                object-fit: contain;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+              }
+              &::after {
+                content: '';
+                background-color: #9e9d9d;
+                width: 95%;
+                height: 15px;
+                position: absolute;
+                top: -15px;
+                display: flex;
+                left: 10px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+              &::before {
+                content: '';
+                background-color: #757575;
+                width: 85%;
+                height: 15px;
+                position: absolute;
+                top: -30px;
+                display: flex;
+                left: 30px;
+                border-top-left-radius: 100px;
+                border-top-right-radius: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.main {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .h1 {
+    text-align: center;
+    color: #fd853a;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
