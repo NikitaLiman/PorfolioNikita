@@ -20,7 +20,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className={Styles.container}>
+    <div id='projects' className={Styles.container}>
       <div className={Styles.container__content}>
         <ProjectsCard
           title="Voltex"
