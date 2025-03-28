@@ -1,26 +1,28 @@
-import React from 'react';
-import Styles from '../Sass/Projects.module.scss';
-import ProjectsCard from './Cards/ProjectsCart';
+import React from "react";
+import Styles from "../Sass/Projects.module.scss";
+import ProjectsCard from "./Cards/ProjectsCart";
 
-import voltex from '../img/Снимок экрана 2025-01-31 202833.png';
-import SearchKino from '../img/Снимок экрана 2025-01-31 201334.png';
-import katala from '../img/Снимок экрана 2025-01-31 201431.png';
+import voltex from "../img/Снимок экрана 2025-01-31 202833.png";
+import SearchKino from "../img/Снимок экрана 2025-01-31 201334.png";
+import katala from "../img/Снимок экрана 2025-01-31 201431.png";
 
 const Projects = () => {
   const text = [
     {
-      text1: 'HTML,SCSS, Zustand, NextJS, TypeScript, JavaScript, Postgresql, Prisma ORM',
+      text1:
+        "HTML,SCSS, Zustand, NextJS, TypeScript, JavaScript, Postgresql, Prisma ORM",
     },
     {
-      text2: 'HTML, JSX, Redux, SCSS, TypeScript, JavaScript, React JS, Rest API',
+      text2:
+        "HTML, JSX, Redux, SCSS, TypeScript, JavaScript, React JS, Rest API",
     },
     {
-      text3: 'HTML, JSX, Redux, SCSS, JavaScript, React JS, Rest API',
+      text3: "HTML, JSX, Redux, SCSS, JavaScript, React JS, Rest API",
     },
   ];
 
   return (
-    <div id='projects' className={Styles.container}>
+    <div id="projects" className={Styles.container}>
       <div className={Styles.container__content}>
         <ProjectsCard
           title="Voltex"
