@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
 }
 *,
 *::before,
@@ -30,7 +30,6 @@ a:hover {
 
 /* Common */
 
-aside,
 nav,
 footer,
 header,
@@ -75,7 +74,7 @@ input,
 textarea,
 button,
 select {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-size: inherit;
   color: inherit;
   background-color: transparent;
@@ -86,7 +85,7 @@ input::-ms-clear {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
