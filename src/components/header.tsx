@@ -82,19 +82,6 @@ const Header = () => {
         <div className={Styles.invisible}>
           {menuOpen && (
             <div className={Styles.invisible__nav}>
-              <ul>
-                {firstList.map((item, index) => (
-                  <li
-                    key={index}
-                    onClick={() => scrollToSection(item.link, index)}
-                    className={`${active === index ? Styles.active : ""} ${
-                      item.name === "Contact" ? Styles.underline : ""
-                    }`}
-                  >
-                    {item.name}
-                  </li>
-                ))}
-              </ul>
               <button className={Styles.vcButton}>
                 <a href="/Nikita_LymanCv.pdf" download="Nikita_Lyman_CV.pdf">
                   Get VC
@@ -104,19 +91,6 @@ const Header = () => {
           )}
 
           <div className={Styles.invisible__navBLock}>
-            <ul>
-              {firstList.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => scrollToSection(item.link, index)}
-                  className={`${active === index ? Styles.active : ""} ${
-                    item.name === "Contact" ? Styles.underline : ""
-                  }`}
-                >
-                  {item.name}
-                </li>
-              ))}
-            </ul>
             <button className={Styles.vcButton}>
               <a href="/Nikita_LymanCv.pdf" download="Nikita_Lyman_CV.pdf">
                 Get VC

@@ -1,10 +1,10 @@
-import React from 'react';
-import Styles from '../Sass/Footer.module.scss';
-import arrow from '../img/up right.png';
+import React from "react";
+import Styles from "../Sass/Footer.module.scss";
+import arrow from "../img/up right.png";
 
-import telegram from '../img/Telegram_2019_Logo.svg.png';
-import gitHub from '../img/Octicons-mark-github.svg';
-import IN from '../img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp';
+import telegram from "../img/Telegram_2019_Logo.svg.png";
+import gitHub from "../img/Octicons-mark-github.svg";
+import IN from "../img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
           <h1>Lets Connect there</h1>
           <a href="/Contact">
             <button>
-              Hire me{' '}
+              Hire me{" "}
               <span>
                 <img src={arrow} alt="" />
               </span>
@@ -25,8 +25,9 @@ const Footer = () => {
           <div className={Styles.Social}>
             <h1>Nikita Lyman</h1>
             <p>
-              I'm a frontend developer with experience in JavaScript,React,TypeScript,Next Js and
-              modern web technologies.I'm ready for new challenges and eager to work!
+              I'm a frontend developer with experience in
+              JavaScript,React,TypeScript,Next Js and modern web
+              technologies.I'm ready for new challenges and eager to work!
             </p>
             <div className={Styles.Social__icons}>
               <ul>
@@ -55,19 +56,16 @@ const Footer = () => {
                 <a href="/">
                   <li>Home</li>
                 </a>
-                <a href="/">
+                <a href="#about">
                   <li>About</li>
                 </a>
-                <a href="/">
+                <a href="#service">
                   <li>Servise</li>
                 </a>
-                <a href="/">
-                  <li>Resume</li>
-                </a>
-                <a href="/">
+                <a href="#projects">
                   <li>Projects</li>
                 </a>
-                <a href="/">
+                <a href="/contact">
                   <li>Contacts </li>
                 </a>
               </ul>
@@ -79,7 +77,7 @@ const Footer = () => {
                   <span>Phone Numbers</span>
                 </li>
                 <li>+48 790 263 681</li>
-                <li>+380 50 740 65 59</li>{' '}
+                <li>+380 50 740 65 59</li>{" "}
                 <li>
                   <span>Email</span>
                 </li>
