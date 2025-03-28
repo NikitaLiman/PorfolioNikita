@@ -15,7 +15,7 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setActive(index);
-      setMenuOpen(false); // Закрываем бургер-меню после клика
+      setMenuOpen(false);
     }
   };
 
@@ -41,7 +41,6 @@ const Header = () => {
           scrolled ? Styles.blurred : ""
         }`}
       >
-        {/* Левое меню */}
         <ul>
           {firstList.slice(0, 3).map((item, index) => (
             <li
@@ -56,12 +55,10 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* Название */}
         <div className={Styles.middlePart}>
           <h1>Nikita Lyman</h1>
         </div>
 
-        {/* Правое меню */}
         <ul>
           {firstList.slice(3).map((item, index) => (
             <li
@@ -81,7 +78,6 @@ const Header = () => {
           </button>
         </ul>
 
-        {/* Бургер-меню */}
         <div className={Styles.invisible}>
           {menuOpen && (
             <div className={Styles.invisible__nav}>
@@ -106,7 +102,6 @@ const Header = () => {
             </div>
           )}
 
-          {/* Дополнительный div для меню */}
           <div className={Styles.invisible__navBLock}>
             <ul>
               {firstList.map((item, index) => (
@@ -128,7 +123,6 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Бургер-кнопка */}
           <div className={Styles.burger} onClick={toggleMenu}>
             <span></span>
             <span></span>
