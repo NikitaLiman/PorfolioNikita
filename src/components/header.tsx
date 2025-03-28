@@ -16,6 +16,7 @@ const Header = () => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       setActive(index);
       setMenuOpen(false);
+      console.log(menuOpen);
     }
   };
 
