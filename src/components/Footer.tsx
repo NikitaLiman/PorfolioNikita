@@ -1,99 +1,105 @@
 import React from "react";
-import Styles from "../Sass/Footer.module.scss";
-import arrow from "../img/up right.png";
+import styles from "../Sass/Footer.module.scss";
+import arrowIcon from "../img/up right.png";
 
-import telegram from "../img/Telegram_2019_Logo.svg.png";
-import gitHub from "../img/Octicons-mark-github.svg";
-import IN from "../img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp";
+// Social icons
+import telegramIcon from "../img/Telegram_2019_Logo.svg.png";
+import githubIcon from "../img/Octicons-mark-github.svg";
+import linkedinIcon from "../img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className={Styles.container}>
-      <div className={Styles.container__content}>
-        <div className={Styles.UpperPart}>
-          <h1>Lets Connect there</h1>
-          <a href="/Contact">
-            <button>
-              Hire me{" "}
-              <span>
-                <img src={arrow} alt="" />
-              </span>
-            </button>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.hireMeSection}>
+          <h2 className={styles.heading}>Let's Connect</h2>
+          <a href="/contact" className={styles.hireButton}>
+            Hire me
+            <span className={styles.arrowIcon}>
+              <img src={arrowIcon} alt="Arrow" />
+            </span>
           </a>
         </div>
-        <div className={Styles.MiddlePart}>
-          <div className={Styles.Social}>
-            <h1>Nikita Lyman</h1>
-            <p>
-              I'm a frontend developer with experience in
-              JavaScript,React,TypeScript,Next Js and modern web
-              technologies.I'm ready for new challenges and eager to work!
+
+        <div className={styles.mainContent}>
+          <div className={styles.aboutSection}>
+            <h3 className={styles.title}>Nikita Lyman</h3>
+            <p className={styles.bio}>
+              I'm a frontend developer with experience in JavaScript, React,
+              TypeScript, Next.js and modern web technologies. I'm ready for new
+              challenges and eager to work!
             </p>
-            <div className={Styles.Social__icons}>
-              <ul>
-                <a href="https://t.me/disappear7779">
-                  <li>
-                    <img src={telegram} alt="" />
-                  </li>
-                </a>
-                <a href="https://github.com/NikitaLiman">
-                  <li>
-                    <img src={gitHub} alt="" />
-                  </li>
-                </a>
-                <a href="https://www.linkedin.com/in/nikita-lyman-325844332">
-                  <li>
-                    <img src={IN} alt="" />
-                  </li>
-                </a>
-              </ul>
+            <div className={styles.socialLinks}>
+              <a
+                href="https://t.me/disappear7779"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <img src={telegramIcon} alt="Telegram" />
+              </a>
+              <a
+                href="https://github.com/NikitaLiman"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <img src={githubIcon} alt="GitHub" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nikita-lyman-325844332"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <img src={linkedinIcon} alt="LinkedIn" />
+              </a>
             </div>
           </div>
-          <div className={Styles.NavigationContact}>
-            <div className={Styles.NavigationContact__first}>
-              <h1>Navigation</h1>
-              <ul>
-                <a href="/">
-                  <li>Home</li>
-                </a>
-                <a href="#about">
-                  <li>About</li>
-                </a>
-                <a href="#service">
-                  <li>Servise</li>
-                </a>
-                <a href="#projects">
-                  <li>Projects</li>
-                </a>
-                <a href="/contact">
-                  <li>Contacts </li>
-                </a>
-              </ul>
-            </div>
-            <div className={Styles.NavigationContact__first}>
-              <h1>Contact</h1>
-              <ul>
+
+          <div className={styles.navSection}>
+            <h3 className={styles.title}>Navigation</h3>
+            <nav>
+              <ul className={styles.navList}>
                 <li>
-                  <span>Phone Numbers</span>
+                  <a href="/">Home</a>
                 </li>
-                <li>+48 790 263 681</li>
-                <li>+380 50 740 65 59</li>{" "}
                 <li>
-                  <span>Email</span>
+                  <a href="#about">About</a>
                 </li>
-                <li>fram08fort29@gmail.com</li>
+                <li>
+                  <a href="#service">Services</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
+                </li>
+                <li>
+                  <a href="/contact">Contact</a>
+                </li>
               </ul>
-            </div>
+            </nav>
+          </div>
+
+          <div className={styles.contactSection}>
+            <h3 className={styles.title}>Contact</h3>
+            <ul className={styles.contactList}>
+              <li className={styles.contactLabel}>Phone Numbers</li>
+              <li className={styles.contactItem}>+48 790 263 681</li>
+              <li className={styles.contactItem}>+380 50 740 65 59</li>
+              <li className={styles.contactLabel}>Email</li>
+              <li className={styles.contactItem}>fram08fort29@gmail.com</li>
+            </ul>
           </div>
         </div>
-        <div className={Styles.LowerPart}>
-          <ul>
-            <li>Copyright© 2025 Nikita Lyman. All Rights Reserved</li>
-            <li>User Terms & Conditions | Privacy Policy</li>
-          </ul>
+
+        <div className={styles.copyright}>
+          <p>Copyright © {currentYear} Nikita Lyman. All Rights Reserved</p>
+          <p>User Terms & Conditions | Privacy Policy</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

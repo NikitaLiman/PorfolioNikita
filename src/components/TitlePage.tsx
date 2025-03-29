@@ -1,45 +1,64 @@
-import React from 'react';
-import Styles from '../Sass/TitlePage.module.scss';
+import React from "react";
+import styles from "../Sass/TitlePage.module.scss";
 
-import logo from '../img/MyImg.png';
-import quote from '../img/quote-up.png';
-import stars from '../img/Frame 4.png';
+import profileImage from "../img/MyImg.png";
+import quoteIcon from "../img/quote-up.png";
+import starsIcon from "../img/Frame 4.png";
 
-const TitlePage = () => {
+const TitlePage: React.FC = () => {
   return (
-    <div className={Styles.container}>
-      <div className={Styles.container__content}>
-        <div className={Styles.greeting}>
-          <button>Hello!</button>
-        </div>
-        <div className={Styles.part_info}>
-          <h1>
-            I'm <span>Nikita</span>,
-          </h1>
-          <p>Frontend Developer</p>
-        </div>
-        <div className={Styles.partFewInfo}>
-          <div className={Styles.FewInfo}>
-            <img src={quote} alt="" />
-            <p>
-              I am a passionate Frontend Developer, skilled in crafting modern and user-friendly web
-              applications.
-            </p>
+    <section id="home" className={styles.titlePage}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.headingGroup}>
+            <div className={styles.greeting}>
+              <button className={styles.greetingButton}>Hello!</button>
+            </div>
+
+            <div className={styles.titleInfo}>
+              <h1 className={styles.title}>
+                I'm <span className={styles.highlight}>Nikita</span>,
+              </h1>
+              <h2 className={styles.subtitle}>Frontend Developer</h2>
+            </div>
           </div>
 
-          <div className={Styles.absoluteBlock}>
-            <img src={logo} alt="" />
+          <div className={styles.profileContent}>
+            <div className={styles.quoteBlock}>
+              <img src={quoteIcon} alt="Quote" className={styles.quoteIcon} />
+              <p className={styles.quoteText}>
+                I am a passionate Frontend Developer, skilled in crafting modern
+                and user-friendly web applications.
+              </p>
+            </div>
+
+            <div className={styles.profileImageWrapper}>
+              <img
+                src={profileImage}
+                alt="Nikita Lyman"
+                className={styles.profileImage}
+              />
+              <div className={styles.imageBg}></div>
+            </div>
+
+            <div className={styles.experienceBlock}>
+              <img src={starsIcon} alt="Stars" className={styles.starsIcon} />
+              <p className={styles.experienceText}>
+                <span className={styles.experienceYears}>2 Years</span>{" "}
+                Experience
+              </p>
+            </div>
           </div>
 
-          <div className={Styles.Expirience}>
-            <img src={stars} alt="" />
-            <p>
-              <span>2 Years</span> Expirience
-            </p>
+          <div className={styles.scrollIndicator}>
+            <div className={styles.mouseIcon}>
+              <span className={styles.scrollWheel}></span>
+            </div>
+            <p className={styles.scrollText}>Scroll down</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

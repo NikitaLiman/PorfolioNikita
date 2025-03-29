@@ -1,24 +1,28 @@
-import React from 'react';
-import Styles from '../../Sass/Servises.module.scss';
+import React from "react";
+import Styles from "../../Sass/ServiceCard.module.scss";
 
-interface props {
+interface Props {
   title: string;
+  description: string;
   img: string;
 }
 
-const ServisesCard: React.FC<props> = ({ title, img }) => {
+const ServiceCard = ({ title, description, img }: Props) => {
   return (
     <div className={Styles.cardContainer}>
       <div className={Styles.cardContainer__content}>
         <div className={Styles.title}>
-          <h1>{title}</h1>
+          <h2>{title}</h2>
         </div>
-        <div className={Styles.Image}>
-          <img src={img} alt="" />
+        <div className={Styles.description}>
+          <p>{description}</p>
+        </div>
+        <div className={Styles.image}>
+          <img src={img} alt={title} />
         </div>
       </div>
     </div>
   );
 };
 
-export default ServisesCard;
+export default ServiceCard;

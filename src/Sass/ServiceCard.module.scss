@@ -1,0 +1,121 @@
+$card-gradient-start: rgba(156, 156, 156, 0.522);
+$card-gradient-end: rgba(85, 85, 85, 0.42);
+$border-color: rgb(193, 193, 193);
+$text-color: white;
+$border-radius-md: 20px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 30px;
+$spacing-xl: 40px;
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    $card-gradient-start 0%,
+    $card-gradient-end 51%
+  );
+  border-radius: $border-radius-md;
+  border: solid 1px $border-color;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  &__content {
+    display: flex;
+    gap: $spacing-lg;
+    flex-direction: column;
+
+    .title {
+      padding: $spacing-sm $spacing-md;
+      min-height: 60px;
+      border-bottom: solid 1px $border-color;
+      display: flex;
+      align-items: center;
+
+      h2 {
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .description {
+      padding: 0 $spacing-md;
+
+      p {
+        color: $text-color;
+        line-height: 1.5;
+      }
+    }
+
+    .image {
+      margin-top: $spacing-xl;
+      position: relative;
+      max-height: 439px;
+      border-end-end-radius: $border-radius-md;
+
+      img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-bottom-right-radius: $border-radius-md;
+        border-bottom-left-radius: $border-radius-md;
+      }
+
+      &::after {
+        content: "";
+        background-color: #9e9d9d;
+        width: 95%;
+        height: 20px;
+        position: absolute;
+        top: -20px;
+        display: flex;
+        left: 10px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+      }
+
+      &::before {
+        content: "";
+        background-color: #757575;
+        width: 85%;
+        height: 20px;
+        position: absolute;
+        top: -40px;
+        display: flex;
+        left: 30px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .cardContainer {
+    &__content {
+      .image {
+        &::after {
+          width: 90%;
+          height: 15px;
+          top: -15px;
+        }
+
+        &::before {
+          width: 80%;
+          height: 15px;
+          top: -30px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}

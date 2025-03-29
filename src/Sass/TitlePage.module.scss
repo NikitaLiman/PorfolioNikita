@@ -1,353 +1,313 @@
+$primary-color: #2c3e50;
+$accent-color: #e74c3c;
+$text-color: #333;
+$light-bg: #f8f9fa;
+$transition-duration: 0.3s;
+$border-radius: 8px;
+$spacing-unit: 1rem;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+$mobile: 768px;
+$tablet: 1024px;
+
+.titlePage {
+  min-height: 100vh;
+  position: relative;
+  background-color: $light-bg;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgba($accent-color, 0.05);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
+  }
+}
+
 .container {
+  max-width: 1400px;
   width: 100%;
-  margin-top: 11px;
-  padding: 180px 5px 0px 5px;
-  &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    .greeting {
-      button {
-        position: relative;
-        width: 103px;
-        height: 45px;
-        border: solid 2px black;
-        border-radius: 38px;
-        font-weight: bold;
-        &::after {
-          content: '';
-          top: -25px;
-          right: -25px;
-          position: absolute;
-          background-image: url('../img/Vector\ 1.png');
-          width: 39px;
-          height: 29px;
-        }
-      }
+  margin: 0 auto;
+  padding: $spacing-unit * 2;
+  height: 100vh;
+  @include flex-center;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: $mobile) {
+    padding: $spacing-unit;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.content {
+  @include flex-column;
+  justify-content: center;
+  width: 100%;
+  gap: $spacing-unit * 4;
+
+  @media (max-width: $mobile) {
+    gap: $spacing-unit * 2;
+  }
+}
+
+.headingGroup {
+  @include flex-column;
+  gap: $spacing-unit;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.greeting {
+  margin-bottom: $spacing-unit;
+
+  .greetingButton {
+    background-color: rgba($accent-color, 0.1);
+    color: $accent-color;
+    border: none;
+    padding: $spacing-unit * 0.5 $spacing-unit;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: default;
+    transition: all $transition-duration ease;
+
+    &:hover {
+      background-color: $accent-color;
+      color: white;
+      transform: translateY(-2px);
     }
-    .part_info {
-      max-width: 913px;
-      text-align: center;
-      h1 {
-        font-size: 95px;
-        span {
-          color: #fd853a;
-        }
-      }
-      p {
-        position: relative;
-        font-size: 95px;
-        z-index: -2;
-        &::after {
-          position: absolute;
-          content: '';
-          background-image: url('../img/Vector\ 2.png');
-          width: 72px;
-          height: 75px;
-          left: -60px;
-          bottom: -40px;
-        }
-      }
-    }
-    .partFewInfo {
-      position: relative;
-      margin-top: 50px;
+  }
+}
+
+.titleInfo {
+  @include flex-column;
+  gap: $spacing-unit * 0.5;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  color: $primary-color;
+
+  @media (max-width: $mobile) {
+    font-size: 2.5rem;
+  }
+
+  .highlight {
+    color: $accent-color;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 0;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .FewInfo {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        max-width: 328px;
-        height: 138px;
-        img {
-          width: 36px;
-          height: 36px;
-        }
-        p {
-          font-weight: bold;
-          line-height: 28px;
-          font-size: 16px;
-        }
-      }
-      .absoluteBlock {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -85px;
-        display: flex;
-        justify-content: center;
-        z-index: -1;
-        img {
-          border-radius: 100%;
-          width: 652px;
-          height: 100%;
-        }
-      }
-      .Expirience {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: end;
-        width: 328px;
-        height: 138px;
-        img {
-          width: 162px;
-          height: 32px;
-        }
-        p {
-          width: fit-content;
-          display: flex;
-          flex-direction: column;
-          align-items: end;
-          span {
-            font-size: 42px;
-
-            color: #fd853a;
-          }
-        }
-      }
+      height: 6px;
+      background-color: rgba($accent-color, 0.2);
+      z-index: -1;
     }
   }
 }
-@media (max-width: 1280px) {
-  .container {
-    width: 100%;
-    margin-top: 11px;
-    padding: 180px 5px 0px 5px;
-    &__content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      .greeting {
-        button {
-          position: relative;
-          width: 103px;
-          height: 45px;
-          border: solid 2px black;
-          border-radius: 38px;
-          font-weight: bold;
-          &::after {
-            content: '';
-            top: -25px;
-            right: -25px;
-            position: absolute;
-            background-image: url('../img/Vector\ 1.png');
-            width: 39px;
-            height: 29px;
-          }
-        }
-      }
-      .part_info {
-        max-width: 913px;
-        text-align: center;
-        h1 {
-          font-size: 75px;
-          span {
-            color: #fd853a;
-          }
-        }
-        p {
-          position: relative;
-          font-size: 75px;
-          z-index: -2;
-          &::after {
-            position: absolute;
-            content: '';
-            background-image: url('../img/Vector\ 2.png');
-            width: 72px;
-            height: 75px;
-            left: -60px;
-            bottom: -40px;
-          }
-        }
-      }
-      .partFewInfo {
-        position: relative;
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .FewInfo {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
 
-          max-width: 228px;
-          height: 138px;
-          img {
-            width: 36px;
-            height: 36px;
-          }
-          p {
-            font-weight: bold;
-            line-height: 24px;
-            font-size: 15px;
-          }
-        }
-        .absoluteBlock {
-          width: 100%;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: -85px;
-          display: flex;
-          justify-content: center;
-          z-index: -1;
-          img {
-            border-radius: 100%;
-            width: 552px;
-            height: 100%;
-          }
-        }
-        .Expirience {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: end;
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba($primary-color, 0.7);
+  margin: 0;
 
-          max-width: 328px;
-          height: 138px;
-          img {
-            width: 162px;
-            height: 32px;
-          }
-          p {
-            width: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            span {
-              font-size: 42px;
-            }
-          }
-        }
-      }
+  @media (max-width: $mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+.profileContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $spacing-unit * 2;
+  align-items: center;
+  animation: fadeIn 1s ease-out 0.3s backwards;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: $spacing-unit * 3;
+  }
+}
+
+.quoteBlock {
+  @include flex-column;
+  gap: $spacing-unit;
+
+  .quoteIcon {
+    width: 32px;
+    height: auto;
+    opacity: 0.7;
+  }
+
+  .quoteText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $text-color;
+    max-width: 350px;
+
+    @media (max-width: $mobile) {
+      font-size: 1rem;
     }
   }
 }
-@media (max-width: 850px) {
-  .container {
+
+.profileImageWrapper {
+  position: relative;
+  @include flex-center;
+  animation: float 6s ease-in-out infinite;
+
+  .profileImage {
+    position: relative;
+    z-index: 2;
+    max-width: 300px;
     width: 100%;
-    margin-top: 11px;
-    padding: 150px 5px 0px 5px;
-    &__content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      .greeting {
-        button {
-          position: relative;
-          width: 103px;
-          height: 45px;
-          border: solid 2px black;
-          border-radius: 38px;
-          font-weight: bold;
-          &::after {
-            content: '';
-            top: -25px;
-            right: -25px;
-            position: absolute;
-            background-image: url('../img/Vector\ 1.png');
-            width: 39px;
-            height: 29px;
-          }
-        }
-      }
-      .part_info {
-        max-width: 913px;
-        text-align: center;
-        h1 {
-          font-size: 55px;
-          span {
-            color: #fd853a;
-          }
-        }
-        p {
-          position: relative;
-          font-size: 55px;
-          z-index: -2;
-          &::after {
-            position: absolute;
-            content: '';
-            background-image: url('../img/Vector\ 2.png');
-            width: 72px;
-            height: 75px;
-            left: -60px;
-            bottom: -40px;
-          }
-        }
-      }
-      .partFewInfo {
-        position: relative;
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .FewInfo {
-          display: none;
-          flex-direction: column;
-          gap: 10px;
+    height: auto;
+    border-radius: $border-radius;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 
-          max-width: 158px;
-          height: 138px;
-          img {
-            width: 36px;
-            height: 36px;
-          }
-          p {
-            font-weight: bold;
-            line-height: 24px;
-            font-size: 15px;
-          }
-        }
-        .absoluteBlock {
-          width: 100%;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: -85px;
-          display: flex;
-          justify-content: center;
-          z-index: -1;
-          img {
-            border-radius: 100%;
-            width: 502px;
-            height: 100%;
-          }
-        }
-        .Expirience {
-          display: none;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: end;
-
-          max-width: 328px;
-          height: 138px;
-          img {
-            width: 162px;
-            height: 32px;
-          }
-          p {
-            width: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            span {
-              font-size: 42px;
-            }
-          }
-        }
-      }
+    @media (max-width: $mobile) {
+      max-width: 250px;
     }
+  }
+
+  .imageBg {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-color: rgba($accent-color, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: pulse 5s ease-in-out infinite;
+
+    @media (max-width: $mobile) {
+      width: 240px;
+      height: 240px;
+    }
+  }
+}
+
+.experienceBlock {
+  @include flex-column;
+  gap: $spacing-unit;
+  align-items: flex-end;
+  justify-content: center;
+
+  @media (max-width: $tablet) {
+    align-items: flex-start;
+  }
+
+  .starsIcon {
+    width: 100px;
+    height: auto;
+  }
+
+  .experienceText {
+    font-size: 1.1rem;
+    color: $text-color;
+
+    .experienceYears {
+      font-weight: 700;
+      color: $accent-color;
+    }
+  }
+}
+
+.scrollIndicator {
+  @include flex-column;
+  align-items: center;
+  gap: $spacing-unit * 0.5;
+  margin-top: $spacing-unit * 2;
+  animation: fadeIn 1s ease-out 0.6s backwards;
+
+  .mouseIcon {
+    width: 26px;
+    height: 40px;
+    border: 2px solid rgba($primary-color, 0.3);
+    border-radius: 20px;
+    @include flex-center;
+
+    .scrollWheel {
+      width: 4px;
+      height: 8px;
+      background-color: rgba($primary-color, 0.5);
+      border-radius: 2px;
+      animation: scrollWheel 1.5s infinite;
+    }
+  }
+
+  .scrollText {
+    font-size: 0.8rem;
+    color: rgba($primary-color, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 }
