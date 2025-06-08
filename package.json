@@ -1,7 +1,7 @@
 {
   "name": "portfolio2",
   "version": "0.1.0",
-  "homepage": "https://NikitaLiman.github.io/PortfolioNL/",
+  "homepage": "https://porfolio-nikita.vercel.app/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
