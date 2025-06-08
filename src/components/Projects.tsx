@@ -5,7 +5,7 @@ import ProjectCard from "../components/Cards/ProjectsCart";
 import voltexImage from "../img/Снимок экрана 2025-01-31 202833.png";
 
 import searchKinoImage from "../img/Снимок экрана 2025-01-31 201334.png";
-import katalaImage from "../img/Снимок экрана 2025-01-31 201431.png";
+import swiftChat from "../img/Chatt.png";
 
 const Projects = () => {
   const projects = [
@@ -30,11 +30,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Katala",
-      image: katalaImage,
-      technologies: "HTML, JSX, Redux, SCSS, JavaScript, React JS, Rest API",
-      url: "https://nikitaliman.github.io/gitHub-pages-react/",
-      description: "A responsive React application with REST API integration",
+      title: "SwiftChat",
+      image: swiftChat,
+      technologies:
+        "Web Sockets, SCSS, Zustand, NextJS, TypeScript, JavaScript, PostgreSQL, Prisma ORM",
+      url: "https://swift-chat-fawn.vercel.app/",
+      description:
+        "An advanced Web-Chat application leveraging NextJS,Web Sockets and PostgreSQL",
     },
   ];
 
