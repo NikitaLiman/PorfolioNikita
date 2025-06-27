@@ -46,8 +46,7 @@ const Header: React.FC = () => {
         ref={headerRef}
         className={`${styles.headerContainer} ${
           isScrolled ? styles.scrolled : ""
-        }`}
-      >
+        }`}>
         <nav className={styles.desktopNav}>
           <ul className={styles.navList}>
             {navigationItems.slice(0, 3).map((item, index) => (
@@ -56,8 +55,7 @@ const Header: React.FC = () => {
                 onClick={() => handleNavigation(item, index)}
                 className={`${styles.navItem} ${
                   activeIndex === index ? styles.active : ""
-                } ${item.name === "About" ? styles.special : ""}`}
-              >
+                } ${item.name === "About" ? styles.special : ""}`}>
                 {item.name}
               </li>
             ))}
@@ -76,13 +74,12 @@ const Header: React.FC = () => {
                 onClick={() => handleNavigation(item, index + 3)}
                 className={`${styles.navItem} ${
                   activeIndex === index + 3 ? styles.active : ""
-                } ${item.name === "Contact" ? styles.special : ""}`}
-              >
+                } ${item.name === "Contact" ? styles.special : ""}`}>
                 {item.name}
               </li>
             ))}
             <li className={styles.cvButton}>
-              <a href="/Nikita_LymanCv.pdf" download="Nikita_Lyman_CV.pdf">
+              <a href="/portfolio.pdf" download="Nikita_Lyman_CV.pdf">
                 Get CV
               </a>
             </li>
@@ -93,28 +90,23 @@ const Header: React.FC = () => {
           <button
             className={styles.burgerButton}
             onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
+            aria-label="Toggle menu">
             <span
               className={`${styles.burgerLine} ${
                 isMenuOpen ? styles.open : ""
-              }`}
-            ></span>
+              }`}></span>
             <span
               className={`${styles.burgerLine} ${
                 isMenuOpen ? styles.open : ""
-              }`}
-            ></span>
+              }`}></span>
             <span
               className={`${styles.burgerLine} ${
                 isMenuOpen ? styles.open : ""
-              }`}
-            ></span>
+              }`}></span>
           </button>
 
           <div
-            className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ""}`}
-          >
+            className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ""}`}>
             <ul className={styles.mobileNavList}>
               {navigationItems.map((item, index) => (
                 <li
@@ -122,8 +114,7 @@ const Header: React.FC = () => {
                   onClick={() => handleNavigation(item, index)}
                   className={`${styles.mobileNavItem} ${
                     activeIndex === index ? styles.active : ""
-                  }`}
-                >
+                  }`}>
                   {item.name}
                 </li>
               ))}

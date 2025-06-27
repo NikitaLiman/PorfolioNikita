@@ -4,7 +4,7 @@ import ProjectCard from "../components/Cards/ProjectsCart";
 
 import voltexImage from "../img/Снимок экрана 2025-01-31 202833.png";
 
-import searchKinoImage from "../img/Снимок экрана 2025-01-31 201334.png";
+import searchKinoImage from "../img/Снимок экрана 2025-06-27 144928.png";
 import swiftChat from "../img/Chatt.png";
 
 const Projects = () => {
@@ -21,12 +21,12 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "SearchKino",
+      title: "IMDX",
       image: searchKinoImage,
       technologies:
-        "HTML, JSX, Redux, SCSS, TypeScript, JavaScript, React JS, Rest API",
-      url: "https://nikitaliman.github.io/SearchKino/",
-      description: "A movie search platform built with React and Redux",
+        "HTML, JSX, Zustand, SCSS, TypeScript, JavaScript, Next JS, Rest API",
+      url: "https://imdx.vercel.app/",
+      description: "A movie search platform built with Next JS and Rest API",
     },
     {
       id: 3,
