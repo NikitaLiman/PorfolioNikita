@@ -79,7 +79,7 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li className={styles.cvButton}>
-              <a href="/portfolio.pdf" download="Nikita_Lyman_CV.pdf">
+              <a href="/cv.pdf" download="Nikita_Lyman_CV.pdf">
                 Get CV
               </a>
             </li>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                 </li>
               ))}
               <li className={styles.mobileCvButton}>
-                <a href="/Nikita_LymanCv.pdf" download="Nikita_Lyman_CV.pdf">
+                <a href="/cv.pdf" download="Nikita_Lyman_CV.pdf">
                   Get CV
                 </a>
               </li>
